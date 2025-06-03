@@ -5,7 +5,7 @@ export default function JokeGetter() {
   const [joke, setJoke] = useState(null);
   const [showSetup, setShowSetup] = useState(true);
   const [nextJokeTrigger, setNextJokeTrigger] = useState(false);
-  const [copied, setCopied] = useState(false); // for feedback
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     axios
@@ -13,7 +13,7 @@ export default function JokeGetter() {
       .then((res) => {
         setJoke(res.data);
         setShowSetup(true);
-        setCopied(false); // reset copy message on new joke
+        setCopied(false); 
       })
       .catch((err) => console.log("Failed to fetch joke:", err));
   }, [nextJokeTrigger]);
@@ -22,7 +22,7 @@ export default function JokeGetter() {
     if (joke) {
       navigator.clipboard.writeText(`${joke.setup} - ${joke.punchline}`);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000); // hide message after 2 sec
+      setTimeout(() => setCopied(false), 2000); 
     }
   };
 
