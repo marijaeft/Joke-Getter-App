@@ -6,7 +6,7 @@ A simple React app that fetches random jokes from the [Official Joke API](https:
 
 ## Demo
 
-[View the live demo here]([https://marijaeft.github.io/Joke-Getter-App/](https://joke-getter-app.vercel.app/))
+[View the live demo here](https://joke-getter-app.vercel.app/)
 
 ---
 
